@@ -10,7 +10,8 @@ export default function Component() {
     async function fetchData() {
       const data = await fetch("http://localhost:3000/api/getAllpost");
       const posts = await data.json();
-      setPosts(posts.data);
+      console.log(posts)
+      setPosts(posts?.data);
     }
     fetchData();
   }, []);
