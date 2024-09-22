@@ -16,9 +16,13 @@ export default  function BlogPost({ params }: { params: { o: string } }) {
     );
   
     const data = await Content.json();
+    console.log(data,"lol")
     setData(data.data)
 
+
   }
+
+  j()
 
 
 
