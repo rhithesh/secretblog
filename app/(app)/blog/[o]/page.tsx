@@ -4,7 +4,7 @@ export default async function BlogPost({ params }: { params: { o: string } }) {
   console.log(params?.o);
 
   const Content = await fetch(
-    `http://localhost:3000/api/getOnePost?id=${params?.o}`,
+    `/api/getOnePost?id=${params?.o}`,
   );
 
   const data = await Content.json();
