@@ -1,7 +1,5 @@
 import { checkAuth } from "@/lib/auth/utils";
 import { Toaster } from "@/components/ui/sonner";
-import Link from "next/link";
-import { Button } from "@/components/ui/Button";
 
 export default async function AppLayout({
   children,

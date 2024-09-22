@@ -19,7 +19,11 @@ export default function Component() {
     <div className="max-w-2xl mx-auto  p-4 mt-10 ">
       <h1 className="text-3xl  mb-8 font-extrabold">Blog</h1>
       <div className="space-y-8">
-        {posts?.map((post, index) => (
+        {posts?.map((post:{
+          id:string,
+          title:string,
+          content:string
+        }, index) => (
           <div
             key={post?.id}
             className="border-b pl-3 hover:bg-black  border-r-2 border-white rounded-xl cursor-pointer pb-8"
@@ -29,9 +33,7 @@ export default function Component() {
                 {post?.title}
               </h2>
               <div className="flex items-center text-sm text-gray-500 mb-2">
-                <span className="mr-2 text-white">{post?.author}</span>
                 <CalendarIcon className="w-4 text-white h-4 mr-1" />
-                <span className="text-white">{post?.date}</span>
               </div>
               <p className="text-white">{post?.content?.slice(0, 30)} .....</p>
             </Link>

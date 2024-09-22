@@ -14,7 +14,7 @@ export default async function BlogPost({ params }: { params: { o: string } }) {
       <article className="prose lg:prose-xl">
         {/*  // title  */}
         <h1 className="text-3xl font-bold mb-4">
-          {data?.data?.title} {params?.slug}
+          {data?.data?.title} 
         </h1>
         <div className="flex items-center text-sm text-gray-500 mb-8">
           <CalendarIcon className="w-4 h-4 mr-1" />
