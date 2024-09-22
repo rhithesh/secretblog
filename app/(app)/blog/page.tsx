@@ -8,7 +8,7 @@ export default function Component() {
 
   useEffect(() => {
     async function fetchData() {
-      const data = await fetch("http://localhost:3000/api/getAllpost");
+      const data = await fetch("/api/getAllpost");
       const posts = await data.json();
       console.log(posts)
       setPosts(posts?.data);
